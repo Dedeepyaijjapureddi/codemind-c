@@ -1,15 +1,20 @@
-#include <stdio.h>
-int main() {
-  int n,re=0,r,o;
-    scanf("%d", &n);
-    o=n;
-    while (n != 0) {
-        r=n % 10;
-        re=re*10+r;
-        n /=10;
+#include<stdio.h>
+int main(){
+    int r,n,rev=0,t;
+    scanf("%d",&n);
+    t=n;
+while(n!=0)
+	{
+		r=n%10;
+		rev=rev*10+r;
+				n=n/10;
+	}
+				if(t==rev)
+    {
+        printf("True");
     }
-    if (o==re)
-        printf("Palindrome");
     else
-        printf("Not Palindrome");
+    {
+        printf("False");
+    }
 }
